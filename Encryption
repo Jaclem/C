@@ -1,0 +1,56 @@
+#include<stdio.h>
+/*
+* Student Name: Joshua Clement
+* Submission Date: 10/25/18
+*
+* Week #: 6
+* Problem #: 1-4a
+* Filename: <clement_1-4a>.c
+* 
+* Problem Description: Write a program that will read a four-digit integer entered by the user and encrypt it as follows:
+* Replace each digit with the result of adding 7 to the digit and getting the remainder after dividing the new value by 10.
+* Then swap the second digit with the fourth. Finally, print the original number and its encrypted one. Now reverse the process.
+* Read an encrypted integer and decrypt it by reversing the algorithm to obtain the original number. Print out both the encrypted and decrypted integer.
+*
+*
+* Notes: For this problem I took 4 seperate integers entered by the user and made 4 more integers that would be set equal to the users numbers after being being
+* added by 7 and then divided by 10 and got the remainder. 
+* 
+*
+* Sample Output:
+* I will encrypt a password that you enter.
+* Enter four seperate intergers making sure add a space after each number.
+* 
+* 1 2 3 4
+*
+* Your original number is
+* 1 2 3 4
+* 
+* And your encrypted number is
+* 0 1 8 9
+*/
+main(void) {
+
+	int num1, num2, num3, num4;
+	int enc1, enc2, enc3, enc4;
+
+	printf("I will encrypt a password that you enter.\n");
+	printf("Enter four seperate intergers making sure add a space after each number.\n"); // prompting user to enter 4 integer numbers to be encrypted.
+
+	scanf_s("%d %d %d %d", &num1, &num2, &num3, &num4); // scanning those numbers into memory
+	printf("\n"); // adding a space so that everything is easier to read.
+
+	printf("Your original number is\n");
+	printf("%d %d %d %d\n", num1, num2, num3, num4); // telling the user their original number they entered.
+	printf("\n");
+
+	enc1 = (num1 + 7) % 10;
+	enc2 = (num2 + 7) % 10;
+	enc3 = (num3 + 7) % 10;
+	enc4 = (num4 + 7) % 10; // making each of the enc variables equal to a user entered variable + 7 and divided by 10 for their remainder.
+
+	printf("And your encrypted number is\n");
+	printf("%d ""%d ""%d ""%d", enc3, enc4, enc1, enc2); // telling the user what their encrypted number is.
+	printf("\n"); // another space
+}
+
