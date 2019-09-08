@@ -1,0 +1,55 @@
+#include <stdio.h>
+/*
+* Student Name: Joshua Clement
+* Submission Date: 11/8/2018
+*
+* Week #: 6
+* Problem #: 5.17
+* Filename: <ch_3_22_joshua>.c
+* Problem Description: Write a function isMultiple that determines for a pair of integers whether the second integer is a multiple of the first. 
+* The function should take two integer arguments and return 1 (true) if the second is a multiple of the first, and 0 (false) otherwise.
+*
+*
+* Notes: Looking back to a previous code written for chapter 2 was helpful for me to understand how to find out whether or not 
+* one number was a multiple of another.
+*
+* Sample Output:
+* Enter two integers and the program will tell you whether the second integer is a multiple of the first \n 1 for true 0 for false (n to end).
+* 25 5
+* 1
+*
+*/
+
+// function prototype 
+int isMultiple(int x, int y);
+
+main(void)
+{
+
+	int a, b;
+
+	// prompting user to enter two integers
+	printf("Enter two integers and the program will tell you whether the second integer is a multiple of the first \n 1 for true 0 for false (n to end).\n");
+	
+	scanf_s("%d %d", &a, &b);
+	printf("", isMultiple(a, b));
+
+}
+
+// function definition
+int isMultiple(int x, int y)
+{
+	int a = x, b = y;
+
+	// initializing if else statement
+	if (a % b == 0)
+	{
+		printf("1 (true)\n");
+	}
+	else
+	{
+		printf("0 (false)\n");
+	}
+
+	return b;
+}
