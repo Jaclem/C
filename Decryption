@@ -1,0 +1,74 @@
+#include<stdio.h>
+/*
+* Student Name: Joshua Clement
+* Submission Date: 10/25/18
+*
+* Week #: 6
+* Problem #: 1-4b
+* Filename: <clement_1-4b>.c
+* Problem Description: Write a program that will read a four-digit integer entered by the user and encrypt it as follows:  
+* Replace each digit with the result of adding 7 to the digit and getting the remainder after dividing the new value by 10. 
+* Then swap the second digit with the fourth. Finally, print the original number and its encrypted one. Now reverse the process. 
+* Read an encrypted integer and decrypt it by reversing the algorithm to obtain the original number. Print out both the encrypted and decrypted integer.
+*
+*
+* Notes: For this problem I just had to reverse the order of the encryption so by subtracting 7 at first instead of adding it (like in the encryption) then 
+* make if else statements that determined if the number was positive after subtracting 7 to leave it alone, and if not then to add 10 and print the number.
+*
+* Sample Output:
+* Now that I have encrypted the 4 intergers that were entered it's time to decrypt them.
+* Enter the four encrypted intergers that were given in the encryption program.
+* 0 1 8 9
+* 
+* This is the decrypted version of the encrypted interger that was entered.
+* 1 2 3 4
+*/
+
+main(void) {
+
+	int num1, num2, num3, num4; // Introducing the first 4 interger variables that will be the users input 
+	int dec1, dec2, dec3, dec4; // Interducing the next 4 intergers that will equal the input entered minus 7.
+
+	printf("Now that I have encrypted the 4 intergers that were entered it's time to decrypt them.\n");
+	printf("Enter the four encrypted intergers that were given in the encryption program.\n"); // Prompting user to enter encrypted 
+
+	scanf_s("%d %d %d %d", &num3, &num4, &num1, &num2); // scanning integers into memory
+
+	dec1 = (num1 - 7);
+	dec2 = (num2 - 7);
+	dec3 = (num3 - 7);
+	dec4 = (num4 - 7); // using the opposite of the encryption by taking their value and subtracting by 7.
+
+	printf("\nThis is the decrypted version of the encrypted interger that was entered.\n"); 
+
+	// if else statements that state if the value is greater than or equal to 0 print the value and if the value is negative then add 10 to the value.
+	if (dec1 >= 0) {
+		printf("%d ", dec1);
+	}
+	else if (dec1 < 0) {
+		dec1 += 10;
+		printf("%d ", dec1);
+	}
+	if (dec2 >= 0) {
+		printf("%d ", dec2);
+	}
+	else if (dec2 < 0) {
+		dec2 += 10;
+		printf("%d ", dec2);
+	}
+	if (dec3 >= 0) {
+		printf("%d ", dec3);
+	}
+	else if (dec3 < 0) {
+		dec3 += 10;
+		printf("%d ", dec3);
+	}
+	if (dec4 >= 0) {
+		printf("%d ", dec4);
+	}
+	else if (dec4 < 0) {
+		dec4 += 10;
+		printf("%d ", dec4);
+	}
+}
+
